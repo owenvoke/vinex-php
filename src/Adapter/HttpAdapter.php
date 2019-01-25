@@ -118,7 +118,7 @@ class HttpAdapter
         $body = (string)$this->response->getBody();
         $code = (int)$this->response->getStatusCode();
 
-        $content = json_decode($body);
+        $content = \GuzzleHttp\json_decode($body);
 
         throw new HttpException($content->message ?? 'Request not processed.', $code);
     }
