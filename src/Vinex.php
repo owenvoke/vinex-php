@@ -6,6 +6,7 @@ namespace pxgamer\Vinex;
 
 use pxgamer\Vinex\Adapter\HttpAdapter;
 use pxgamer\Vinex\Api\Basic;
+use pxgamer\Vinex\Api\General;
 
 class Vinex
 {
@@ -20,5 +21,10 @@ class Vinex
     public function basic(): Basic
     {
         return new Basic($this->adapter);
+    }
+
+    public function general(): General
+    {
+        return new General($this->adapter);
     }
 }
