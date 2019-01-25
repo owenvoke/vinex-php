@@ -22,19 +22,19 @@ class Basic extends AbstractApi
     {
         $response = $this->adapter->get(sprintf('%s/v2/markets', $this->endpoint));
 
-        $market = json_decode($response);
+        $data = json_decode($response);
 
         return array_map(function ($market) {
             return new MarketEntity($market);
-        }, $market->data);
+        }, $data->data);
     }
 
     public function getSingleMarketInformation(string $marketSymbol): MarketEntity
     {
         $response = $this->adapter->get(sprintf('%s/v2/markets/%s', $this->endpoint, $marketSymbol));
 
-        $market = json_decode($response);
+        $data = json_decode($response);
 
-        return new MarketEntity($market->data);
+        return new MarketEntity($data->data);
     }
 }
