@@ -8,6 +8,10 @@ use pxgamer\Vinex\Adapter\HttpAdapter;
 use pxgamer\Vinex\Api\Basic;
 use pxgamer\Vinex\Api\General;
 
+/**
+ * @link https://vinex.network VINEX Exchange
+ * @link https://docs.vinex.network VINEX API Documentation
+ */
 class Vinex
 {
     /** @var HttpAdapter */
