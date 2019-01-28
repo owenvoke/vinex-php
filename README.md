@@ -19,7 +19,47 @@ $ composer require pxgamer/vinex
 
 ## Usage
 
-...
+**Create an instance of the API**
+
+```php
+$adapter = new HttpAdapter('api-token');
+$vinex = new Vinex($adapter);
+
+$vinex->basic();
+$vinex->general();
+$vinex->account();
+```
+
+**Basic API calls**
+
+```php
+// Retrieve the current server unix timestamp (e.g. `1548690153`)
+$vinex->basic()->getServerTime();
+// Retrieve an array of Entity\Market instances
+$vinex->basic()->getAllMarketInformation();
+// Retreive a single Entity\Market instance
+$vinex->basic()->getSingleMarketInformation('market');
+```
+
+**General API calls**
+
+```php
+// Retrieve an array of Entity\MarketOrder instances
+$vinex->general()->getMarketOrders('order-type', 'market');
+```
+
+**Account API calls**
+
+```php
+// Retrieve an array of Entity\Balance instances
+$vinex->account()->getAllBalanceInformation();
+// Retrieve a single Entity\Balance instance
+$vinex->account()->getSingleBalanceInformation('coin');
+// Retrieve an array of Entity\Order instances
+$vinex->account()->getMyOrders();
+// Retrieve an array of Entity\Trade instances
+$vinex->account()->getMyTrading();
+```
 
 ## Change log
 

@@ -6,4 +6,9 @@ Updates should follow the [Keep a CHANGELOG](https://keepachangelog.com) princip
 
 ## [Unreleased]
 
+## v1.0.0-beta.1 - 2019-01-28
+
+### Added
+- Initial release
+
 [Unreleased]: https://github.com/pxgamer/vinex-php/compare/master...develop
