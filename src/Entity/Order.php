@@ -14,10 +14,10 @@ final class Order extends AbstractEntity
     public $type;
     /** @var int */
     public $createdAt;
-    /** @var float */
+    /** @var float|int */
     public $remain;
-    /** @var float */
+    /** @var float|int */
     public $amount;
-    /** @var float */
+    /** @var float|int */
     public $price;
 }

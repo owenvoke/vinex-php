@@ -10,13 +10,13 @@ final class Trade extends AbstractEntity
     public $market;
     /** @var string */
     public $type;
-    /** @var float */
+    /** @var float|int */
     public $priceOrder;
-    /** @var float */
+    /** @var float|int */
     public $amountOrder;
-    /** @var float */
+    /** @var float|int */
     public $price;
-    /** @var float */
+    /** @var float|int */
     public $amount;
     /** @var int */
     public $createdAt;

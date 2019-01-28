@@ -8,8 +8,8 @@ final class Balance extends AbstractEntity
 {
     /** @var string */
     public $asset;
-    /** @var float */
+    /** @var float|int */
     public $free;
-    /** @var float */
+    /** @var float|int */
     public $locked;
 }

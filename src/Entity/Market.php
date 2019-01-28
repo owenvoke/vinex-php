@@ -8,18 +8,18 @@ final class Market extends AbstractEntity
 {
     /** @var string */
     public $symbol;
-    /** @var float */
+    /** @var float|int */
     public $lastPrice;
-    /** @var float */
+    /** @var float|int */
     public $volume;
-    /** @var float */
+    /** @var float|int */
     public $volume24h;
-    /** @var float */
+    /** @var float|int */
     public $change24h;
-    /** @var float */
+    /** @var float|int */
     public $high24h;
-    /** @var float */
+    /** @var float|int */
     public $low24h;
-    /** @var float */
+    /** @var float|int */
     public $threshold;
 }

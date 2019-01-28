@@ -6,11 +6,11 @@ namespace pxgamer\Vinex\Entity;
 
 final class MarketOrder extends AbstractEntity
 {
-    /** @var float */
+    /** @var float|int */
     public $price;
-    /** @var float */
+    /** @var float|int */
     public $amount;
-    /** @var float */
+    /** @var float|int */
     public $remain;
     /** @var bool */
     public $inOrder;
