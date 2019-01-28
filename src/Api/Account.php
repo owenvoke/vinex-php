@@ -50,7 +50,7 @@ class Account extends AbstractApi
     ): array {
         $query = [
             'page' => $page ?? 1,
-            'limit' => $limit ?? OrderEntity::DEFAULT_LIMIT,
+            'limit' => $limit ?? self::DEFAULT_LIMIT,
             'recv_window' => $receiveWindow ?? 10,
             'time_stamp' => time(),
         ];
@@ -69,8 +69,8 @@ class Account extends AbstractApi
 
         $data = json_decode($response);
 
-        return array_map(function ($market) {
-            return new OrderEntity($market);
+        return array_map(function ($order) {
+            return new OrderEntity($order);
         }, $data->data);
     }
 
@@ -104,8 +104,8 @@ class Account extends AbstractApi
 
         $data = json_decode($response);
 
-        return array_map(function ($market) {
-            return new TradeEntity($market);
+        return array_map(function ($trade) {
+            return new TradeEntity($trade);
         }, $data->data);
     }
 }

@@ -6,8 +6,6 @@ namespace pxgamer\Vinex\Entity;
 
 final class Order extends AbstractEntity
 {
-    public const DEFAULT_LIMIT = 10;
-
     /** @var string */
     public $uid;
     /** @var string */

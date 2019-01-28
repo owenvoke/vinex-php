@@ -26,7 +26,7 @@ class General extends AbstractApi
         $query = http_build_query([
             'type' => $type,
             'market' => $market,
-            'limit' => $limit ?? MarketOrderEntity::DEFAULT_LIMIT,
+            'limit' => $limit ?? self::DEFAULT_LIMIT,
             'recv_window' => $receiveWindow ?? 10,
             'time_stamp' => time(),
         ]);
