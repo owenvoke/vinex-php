@@ -81,7 +81,7 @@ class Account extends AbstractApi
      * @param int|null    $receiveWindow Allowed time in seconds between the timestamp and server time.
      * @return TradeEntity[]
      */
-    public function getMyTrading(
+    public function getMyTrades(
         ?int $page = null,
         ?string $market = null,
         ?int $limit = null,
