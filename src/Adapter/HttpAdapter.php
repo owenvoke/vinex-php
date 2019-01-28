@@ -20,7 +20,7 @@ class HttpAdapter
 
     public function __construct(?string $token = null, ?ClientInterface $client = null)
     {
-        $this->client = $client ?: new Client(['headers' => ['api-key' => sprintf('Bearer %s', $token)]]);
+        $this->client = $client ?: new Client(['headers' => ['api-key' => sprintf('%s', $token)]]);
     }
 
     /**
@@ -120,6 +120,6 @@ class HttpAdapter
 
         $content = \GuzzleHttp\json_decode($body);
 
-        throw new HttpException($content->message ?? 'Request not processed.', $code);
+        throw new HttpException($content->error->message ?? 'Request not processed.', $code);
     }
 }
