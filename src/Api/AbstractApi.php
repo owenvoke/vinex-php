@@ -10,6 +10,8 @@ abstract class AbstractApi
 {
     /** @var string */
     public const ENDPOINT = 'https://api.vinex.network/api';
+    /** @var int */
+    public const DEFAULT_LIMIT = 10;
 
     /** @var HttpAdapter */
     protected $adapter;
