@@ -120,6 +120,6 @@ class HttpAdapter
 
         $content = \GuzzleHttp\json_decode($body);
 
-        throw new HttpException($content->message ?? 'Request not processed.', $code);
+        throw new HttpException($content->error->message ?? 'Request not processed.', $code);
     }
 }
