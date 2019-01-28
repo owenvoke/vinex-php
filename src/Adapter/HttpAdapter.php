@@ -20,7 +20,7 @@ class HttpAdapter
 
     public function __construct(?string $token = null, ?ClientInterface $client = null)
     {
-        $this->client = $client ?: new Client(['headers' => ['api-key' => sprintf('Bearer %s', $token)]]);
+        $this->client = $client ?: new Client(['headers' => ['api-key' => sprintf('%s', $token)]]);
     }
 
     /**
