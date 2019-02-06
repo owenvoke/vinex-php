@@ -1,5 +1,5 @@
 {
-    "name": "pxgamer/vinex-php",
+    "name": "pxgamer/vinex",
     "type": "library",
     "description": "A PHP wrapper for the VINEX API.",
     "license": "MIT",
