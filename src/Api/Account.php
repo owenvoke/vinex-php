@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace pxgamer\Vinex\Api;
 
-use pxgamer\Vinex\Entity\Balance as BalanceEntity;
+use function GuzzleHttp\json_decode;
 use pxgamer\Vinex\Entity\Order as OrderEntity;
 use pxgamer\Vinex\Entity\Trade as TradeEntity;
-use function GuzzleHttp\json_decode;
+use pxgamer\Vinex\Entity\Balance as BalanceEntity;
 
 /** @link https://docs.vinex.network/api_account_endpoint.html */
 class Account extends AbstractApi

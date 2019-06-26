@@ -2,10 +2,10 @@
 
 namespace pxgamer\Vinex\Api;
 
-use PHPUnit\Framework\TestCase;
-use pxgamer\Vinex\Adapter\HttpAdapter;
-use pxgamer\Vinex\Entity\Market;
 use pxgamer\Vinex\Vinex;
+use PHPUnit\Framework\TestCase;
+use pxgamer\Vinex\Entity\Market;
+use pxgamer\Vinex\Adapter\HttpAdapter;
 
 class BasicTest extends TestCase
 {

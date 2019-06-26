@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace pxgamer\Vinex\Adapter;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
-use GuzzleHttp\Psr7\Response;
 use pxgamer\Vinex\Exception\HttpException;
 
 class HttpAdapter
@@ -36,7 +36,7 @@ class HttpAdapter
             $this->handleError();
         }
 
-        return (string)$this->response->getBody();
+        return (string) $this->response->getBody();
     }
 
     /**
@@ -52,7 +52,7 @@ class HttpAdapter
             $this->handleError();
         }
 
-        return (string)$this->response->getBody();
+        return (string) $this->response->getBody();
     }
 
     /**
@@ -74,7 +74,7 @@ class HttpAdapter
             $this->handleError();
         }
 
-        return (string)$this->response->getBody();
+        return (string) $this->response->getBody();
     }
 
     /**
@@ -96,7 +96,7 @@ class HttpAdapter
             $this->handleError();
         }
 
-        return (string)$this->response->getBody();
+        return (string) $this->response->getBody();
     }
 
     public function getLatestResponseHeaders(): ?array
@@ -106,17 +106,17 @@ class HttpAdapter
         }
 
         return [
-            'reset' => (int)(string)$this->response->getHeader('RateLimit-Reset'),
-            'remaining' => (int)(string)$this->response->getHeader('RateLimit-Remaining'),
-            'limit' => (int)(string)$this->response->getHeader('RateLimit-Limit'),
+            'reset' => (int) (string) $this->response->getHeader('RateLimit-Reset'),
+            'remaining' => (int) (string) $this->response->getHeader('RateLimit-Remaining'),
+            'limit' => (int) (string) $this->response->getHeader('RateLimit-Limit'),
         ];
     }
 
     /** @throws HttpException */
     protected function handleError(): void
     {
-        $body = (string)$this->response->getBody();
-        $code = (int)$this->response->getStatusCode();
+        $body = (string) $this->response->getBody();
+        $code = (int) $this->response->getStatusCode();
 
         $content = \GuzzleHttp\json_decode($body);
 

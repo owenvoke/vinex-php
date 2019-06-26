@@ -9,7 +9,7 @@ abstract class AbstractEntity
     /** @param \stdClass|array|null $parameters */
     public function __construct($parameters = null)
     {
-        if (!$parameters) {
+        if (! $parameters) {
             return;
         }
 
