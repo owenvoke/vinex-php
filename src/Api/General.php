@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace pxgamer\Vinex\Api;
 
-use pxgamer\Vinex\Entity\MarketOrder as MarketOrderEntity;
 use function GuzzleHttp\json_decode;
+use pxgamer\Vinex\Entity\MarketOrder as MarketOrderEntity;
 
 /** @link https://docs.vinex.network/api_general_endpoint.html */
 class General extends AbstractApi
