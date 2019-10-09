@@ -20,7 +20,7 @@ class HttpAdapter implements BaseAdapter
     protected $response;
 
     /**
-     * Create a new HttpAdaptor instance with a given token and client
+     * Create a new HttpAdaptor instance with a given token and client.
      *
      * @param string|null $token
      * @param ClientInterface|null $client
@@ -137,7 +137,7 @@ class HttpAdapter implements BaseAdapter
     }
 
     /**
-     * Handle a request exception
+     * Handle a request exception.
      *
      * @return void
      * @throws HttpException
