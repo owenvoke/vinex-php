@@ -29,8 +29,8 @@ class HttpAdapter implements BaseAdapter
     {
         $this->client = $client ?: new Client([
             'headers' => [
-                'api-key' => $token ?? ''
-            ]
+                'api-key' => $token ?? '',
+            ],
         ]);
     }
 
