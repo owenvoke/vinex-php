@@ -5,7 +5,8 @@
     "license": "MIT",
     "require": {
         "php": "^7.1",
-        "guzzlehttp/guzzle": "^6.3"
+        "guzzlehttp/guzzle": "^6.3",
+        "pxgamer/http-adapters": "^1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^7.0",
