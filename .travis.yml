@@ -2,18 +2,13 @@ dist: trusty
 language: php
 
 php:
-- 7.2
-- 7.3
-- nightly
-
-matrix:
-    allow_failures:
-    - php: nightly
+- '7.2'
+- '7.3'
 
 ## Cache composer
 cache:
-    directories:
-    - $HOME/.composer/cache
+  directories:
+  - $HOME/.composer/cache
 
 before_script:
 - travis_retry composer update --no-interaction --prefer-dist
