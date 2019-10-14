@@ -12,7 +12,7 @@ class BasicTest extends TestCase
     /** @var Vinex */
     private $apiInstance;
 
-    public function setUp()
+    public function setUp(): void
     {
         $adapter = new HttpAdapter();
         $this->apiInstance = new Vinex($adapter);
